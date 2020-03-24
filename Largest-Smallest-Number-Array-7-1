@@ -1,0 +1,50 @@
+//***************************************
+//.cpp
+//Levi Mccann
+//Largest /Smallest Values (7-1)
+//03/24/2020
+//CIS61 Hendrickson
+//***************************************
+
+
+
+#include <iostream>
+using namespace std;
+
+int main()
+ {
+   //declare array and variables
+   int numbers[10];
+   int smallest = 0;
+   int largest = 0;
+   int temp = 0;
+
+   //enter 10 numbers
+   for (int i = 0; i < 10; i ++)
+   {
+     cout<<"Please enter number " <<i +1 <<": " <<endl;
+     cin>> numbers[i];
+   }
+  //now compare numbers
+  smallest = numbers[0];
+  largest = numbers[0];
+
+  for (int i = 1; i <= 10; i ++)
+    {
+      temp = numbers[i];
+      if (temp < smallest)
+          smallest = temp;
+        //  cout<<"The smallest number is: " <<smallest;
+      if (temp > largest)
+          largest = temp;
+        
+
+    }
+  //output to display
+
+    cout<<"Largest number: " <<largest <<endl;
+    cout<<"Smallest number: " <<smallest <<endl;
+
+return 0;
+
+}
