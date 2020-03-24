@@ -1,0 +1,32 @@
+//**************************************
+//.cpp
+//Levi McCann
+//03/24/2020
+//Stock Price Average (ZAK11-21)
+//CIS61 Hendrickson
+//***************************************
+
+#include <iomanip>
+#include <string>
+#include <iostream>
+using namespace std;
+
+int main()
+ {
+   double stockPrice[10] = {96.5, 100.5, 100.5, 100.5, 99, 99, 99, 100, 98.5, 98.9};
+   double temp;  //temporary 
+   double avg = 0;  //average
+   double sum = 0;  //sum
+
+  // use the numbers in array in for loop to get average and disply ouput
+   for (int i = 0; i < 10; i ++ )
+   {
+     sum = sum + stockPrice[i]; //get sum
+     avg = sum / 10; //calculate avg
+   }
+
+  cout<< "The total sum paid for the stock is: $" <<sum <<endl;
+  cout<<"The average price paid for the stock is: $" <<avg <<endl;
+
+  return 0;
+}
