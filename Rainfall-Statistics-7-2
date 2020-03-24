@@ -1,0 +1,60 @@
+//**************************************
+//.cpp
+//Levi MCCann
+//Rainfall Statistics 7-2
+//03/24/20
+//cis 61 hendrickson
+//***************************************
+
+
+
+
+#include <iomanip>
+#include <string>
+#include <iostream>
+using namespace std;
+
+int main()
+ {
+   double rainfall[12];
+   double total = 0;
+   double avg = 0;
+   double rainMAX = 0;
+   double rainMIN = 0;
+   double temp = 0;
+
+   //assign values to rainfall array
+
+   for (int i = 0; i < 12; i++)
+      {
+        cout <<"Please enter (in inches) rainfall for month # " <<i+1 <<": " <<endl;
+        cin>> rainfall[i];
+        total += rainfall[i];
+        
+      }
+
+    //calculate avg rainfall
+    avg = total / 12;
+    rainMAX = rainfall[0];
+    rainMIN = rainfall[0];
+
+    //compare
+    for (int i = 1; i <=12; i++)
+    {
+      temp = rainfall[i];
+      if (temp < rainMIN)
+        rainMIN = temp;
+      if (temp > rainMAX)
+        temp = rainMAX;
+
+    }
+
+    //output results
+    cout<<"Total rainfall was: " <<setprecision(2) <<fixed <<showpoint <<total <<endl;
+    cout<<"Average rainfall was: " <<setprecision(2) <<fixed <<showpoint <<avg <<endl;
+    cout<<"Highest rainfall was: " <<setprecision(2) <<fixed <<showpoint <<rainMAX <<endl;
+    cout<<"Lowest rainfall was: " <<setprecision(2) <<fixed <<showpoint <<rainMIN <<endl;
+    
+return 0;
+
+}
