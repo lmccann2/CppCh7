@@ -1,0 +1,42 @@
+//**********************************
+//.cpp
+//Levi Mccann
+//03/24/2020
+//Birthdays 2 d Array 
+//CIS61 Hendrickson
+//***********************************
+
+#include <iomanip>
+#include <string>
+#include <cstdlib>
+#include <cmath>
+#include <iostream>
+using namespace std;
+
+int main()
+ {
+   char name[20];
+   char bday[20];
+   int num[5]; 
+    num[0] = 1;
+    num[1] = 2;
+    num[2] = 3;
+    num[3] = 4;
+    num[4] = 5;
+   string birthday;
+   string name1;
+
+   
+    for (int i = 0; i <5; i++)
+   //get array values
+   {
+    cout<<"Enter the name of friend #"  <<num[i]<<" : " <<endl;
+    cin.getline(name, 20) ;
+    name1 = name;
+    cout<<"Enter Friend #" <<num[i] <<" birthday: (use format mm/dd/yyyy) : " <<endl;
+    cin.getline(bday, 20);
+    birthday = bday;
+    cout <<name1 <<"\'s birthday is: " <<bday <<endl;
+   }
+return 0;
+}
