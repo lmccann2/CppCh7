@@ -1,0 +1,57 @@
+//************************************
+//.cpp
+//Levi McCann
+//12 Integers Vector (8-1)
+//03/24/20
+//CIS61 Hendrickson
+//************************************
+
+#include <iomanip>
+#include <string>
+#include <vector>  //include for vectors
+#include <iostream>
+using namespace std;
+
+int main()
+ {
+  //format vector<datatype> namwofVector
+  vector<int> myIntegerVector;
+  myIntegerVector.push_back(5);
+  myIntegerVector.push_back(10);
+  myIntegerVector.push_back(15);
+  myIntegerVector.push_back(20);
+  myIntegerVector.push_back(25);
+  myIntegerVector.push_back(30);
+  myIntegerVector.push_back(35);
+  myIntegerVector.push_back(40);
+  myIntegerVector.push_back(45);
+  myIntegerVector.push_back(50);
+  myIntegerVector.push_back(55);
+  myIntegerVector.push_back(60);
+
+  //now reverse vector
+  myIntegerVector.push_back(60);
+  myIntegerVector.push_back(55);
+  myIntegerVector.push_back(50);
+  myIntegerVector.push_back(45);
+  myIntegerVector.push_back(40);
+  myIntegerVector.push_back(35);
+  myIntegerVector.push_back(30);
+  myIntegerVector.push_back(25);
+  myIntegerVector.push_back(20);
+  myIntegerVector.push_back(15);
+  myIntegerVector.push_back(10);
+  myIntegerVector.push_back(5);
+
+  //print out vector
+  cout<<"Vector: and vector reverse " <<endl;
+  for (unsigned int i = 0; i < myIntegerVector.size(); i++)
+  {
+    cout<< myIntegerVector[i] <<""<<endl;
+    cout<<endl;
+  }
+  
+  cout<<endl;
+  return 0;
+  
+}
